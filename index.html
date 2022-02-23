@@ -1,1 +1,928 @@
-<h1>Pic Word Web</h1>
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content=" width=device-width">
+  <meta name="Title" content="FIRST Learn  to earn GAME" />
+  <meta name="description" content="Play fun mobile word games, learn words in any language. Tokenize player knowledge and compete with players around the world!" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="Play fun mobile word games, learn words in any language. Tokenize player knowledge and compete with players around the world!" />
+  <meta property="og:url" content="" />
+  <meta property="og:sitename" content="" />
+  <meta property="og:title" content="FIRST Learn  to earn GAME">
+  <meta property="og:image" content="images/hero-img.png" />
+  <title>FIRST Learn  to earn GAME</title>
+  <link type="text/css" rel="stylesheet" href="css/app.css?v=1.2" />
+  <link rel="shortcut icon" href="favicon/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
+  <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  
+  <svg class="canvas-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 60 -9" />
+      </filter>
+    </defs>
+  </svg>
+ 
+  <nav class="nav">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-2">
+          <a class="logo" href="/"><img src="images/logo.svg" alt=""></a>
+            
+            <div id="nav-btn"><svg width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="60" rx="30" fill="#F6FF12"/><path d="M40.91 18H19.09c-.6 0-1.09.912-1.09 2.032s.49 2.031 1.09 2.031h21.82c.6 0 1.09-.912 1.09-2.031 0-1.12-.49-2.032-1.09-2.032ZM40.91 28.12H19.09c-.6 0-1.09.912-1.09 2.031 0 1.12.49 2.032 1.09 2.032h21.82c.6 0 1.09-.912 1.09-2.032s-.49-2.031-1.09-2.031ZM40.91 37.937H19.09c-.6 0-1.09.912-1.09 2.032S18.49 42 19.09 42h21.82c.6 0 1.09-.912 1.09-2.032s-.49-2.031-1.09-2.031Z" fill="#000"/></svg></div>
+        </div>
+        <div class="col-lg-10 menu-container">
+          <ul class="menu">
+            <li><a class="scroll" href="#game">Game</a></li>
+            <li><a class="scroll" href="#roadmap">Roadmap</a></li>
+            <li><a class="scroll" href="#team">Team</a></li>
+          </ul>
+          <div class="btn-container">
+            <!--<a href="#subscription" rel="modal:open" class="blob-btn">
+              Launch pads
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="canvas-svg">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+                  <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                </filter>
+              </defs>
+            </svg>-->
+            
+            <a href="#platforms" class="btn-registration scroll">Launch pads</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-7 hero-item">
+          <h5>Mobile. Hypercasual. Multiplayer game.</h5>
+          <h1>FIRST Learn  to earn GAME</h1>
+          <p>Play fun mobile word games, learn words in any language. Tokenize player knowledge and compete with players around the world!</p>
+        </div>
+        <div class="col-xl-5">
+          <div class="hero-img">
+            <img src="images/hero-img.png" srcset="images/hero-img@2x.png 2x" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom row">
+        <div class="col-xl-5 before-border">
+          <h6>Subscribe to receive updates:</h6>
+          <ul class="social">
+            <li><a href="#tw" target="_blank"><svg viewBox="0 0 44 44" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M37.197 14.476c.023.329.023.657.023.985C37.22 25.469 29.59 37 15.645 37A21.455 21.455 0 0 1 4 33.602c.61.07 1.197.093 1.831.093 3.545 0 6.809-1.195 9.415-3.234a7.595 7.595 0 0 1-7.09-5.25c.469.07.939.117 1.432.117.68 0 1.361-.094 1.995-.258a7.575 7.575 0 0 1-6.08-7.43v-.093a7.647 7.647 0 0 0 3.427.96 7.562 7.562 0 0 1-3.38-6.304c0-1.406.375-2.695 1.032-3.82a21.567 21.567 0 0 0 15.636 7.922 8.537 8.537 0 0 1-.188-1.735c0-4.172 3.381-7.57 7.584-7.57 2.183 0 4.155.914 5.54 2.39a14.944 14.944 0 0 0 4.813-1.828 7.552 7.552 0 0 1-3.334 4.172c1.526-.164 3.005-.586 4.367-1.171a16.284 16.284 0 0 1-3.803 3.913Z" fill="#fff"></path></svg></a></li>
+            <li><a href="#tlg" target="_blank"><svg viewBox="0 0 38 44" width="38" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m37.888 8.327-5.734 26.925c-.432 1.9-1.56 2.373-3.163 1.478l-8.737-6.41-4.216 4.036c-.466.465-.856.853-1.755.853l.627-8.859 16.193-14.569c.704-.625-.153-.97-1.095-.346L9.991 23.985 1.373 21.3c-1.875-.583-1.909-1.867.39-2.762L35.47 5.608c1.56-.583 2.926.346 2.417 2.72Z" fill="#fff"></path></svg></a></li>
+            <li><a href="#" target="_blank"><svg viewBox="0 0 55 44" width="55" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M43.305 8.787a.112.112 0 0 0-.057-.051 36.72 36.72 0 0 0-8.956-2.734.138.138 0 0 0-.144.067c-.41.733-.782 1.485-1.115 2.254a34.039 34.039 0 0 0-10.06 0 22.646 22.646 0 0 0-1.132-2.254.14.14 0 0 0-.144-.067 36.615 36.615 0 0 0-8.956 2.734.128.128 0 0 0-.059.05c-5.704 8.385-7.267 16.564-6.5 24.642a.146.146 0 0 0 .057.101 36.716 36.716 0 0 0 10.987 5.465.144.144 0 0 0 .154-.05 25.59 25.59 0 0 0 2.248-3.597.137.137 0 0 0-.076-.191 24.196 24.196 0 0 1-3.433-1.61.14.14 0 0 1-.069-.111.137.137 0 0 1 .056-.12c.23-.17.461-.346.681-.525a.137.137 0 0 1 .143-.019c7.2 3.235 14.996 3.235 22.112 0a.137.137 0 0 1 .144.017c.22.18.45.358.683.528a.14.14 0 0 1 .056.118.137.137 0 0 1-.068.112 22.715 22.715 0 0 1-3.434 1.608.141.141 0 0 0-.081.08.136.136 0 0 0 .006.113 28.728 28.728 0 0 0 2.246 3.595.141.141 0 0 0 .154.052 36.597 36.597 0 0 0 11.005-5.465.141.141 0 0 0 .057-.1c.918-9.338-1.536-17.45-6.505-24.642ZM20.703 28.51c-2.168 0-3.954-1.958-3.954-4.363 0-2.405 1.752-4.364 3.954-4.364 2.22 0 3.99 1.976 3.955 4.364 0 2.405-1.752 4.363-3.955 4.363Zm14.62 0c-2.167 0-3.954-1.958-3.954-4.363 0-2.405 1.752-4.364 3.955-4.364 2.22 0 3.989 1.976 3.954 4.364 0 2.405-1.734 4.363-3.954 4.363Z" fill="#fff"></path></svg></a></li>
+            <li><a href="#" target="_blank"><svg viewBox="0 0 39 44" width="39" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#c)"><path d="M19.257 12.117a9.859 9.859 0 0 0-9.874 9.874 9.859 9.859 0 0 0 9.874 9.875 9.859 9.859 0 0 0 9.874-9.875 9.859 9.859 0 0 0-9.874-9.874Zm0 16.294c-3.532 0-6.42-2.88-6.42-6.42s2.88-6.42 6.42-6.42 6.42 2.88 6.42 6.42-2.888 6.42-6.42 6.42Zm12.581-16.698a2.298 2.298 0 0 1-2.303 2.303 2.303 2.303 0 1 1 2.303-2.303Zm6.54 2.338c-.146-3.085-.85-5.818-3.11-8.07-2.252-2.251-4.985-2.956-8.07-3.11-3.18-.181-12.71-.181-15.89 0-3.077.145-5.81.85-8.07 3.102-2.26 2.251-2.956 4.984-3.11 8.07-.18 3.179-.18 12.71 0 15.889.146 3.085.85 5.818 3.11 8.07 2.26 2.251 4.985 2.956 8.07 3.11 3.18.18 12.71.18 15.89 0 3.085-.146 5.818-.85 8.07-3.11 2.25-2.252 2.956-4.985 3.11-8.07.18-3.18.18-12.702 0-15.881ZM34.27 33.344a6.5 6.5 0 0 1-3.66 3.66c-2.536 1.006-8.551.774-11.353.774-2.801 0-8.826.224-11.352-.773a6.5 6.5 0 0 1-3.661-3.661c-1.006-2.536-.773-8.551-.773-11.353 0-2.801-.224-8.825.773-11.352a6.5 6.5 0 0 1 3.66-3.661c2.536-1.005 8.552-.773 11.353-.773 2.802 0 8.826-.224 11.353.773a6.5 6.5 0 0 1 3.66 3.661c1.006 2.535.774 8.55.774 11.352 0 2.802.232 8.826-.773 11.353Z" fill="#fff"></path></g><defs><clipPath id="c"><path fill="#fff" d="M0 0h38.5v44H0z"></path></clipPath></defs></svg></a></li>
+          </ul>
+        </div>
+        <div class="col-xl-7" id="platforms">
+          <h6>See our pages on platforms below:</h6>
+          <ul class="platforms-list">
+            <li><a href="#"><img src="images/logo1.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/logo2.svg" alt=""></a></li>
+            <li class="no-active"><a href="#"><img src="images/logo3.svg" alt=""></a> <p>Coming soon</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="unique" id="game">
+      <div class="container">
+        <h2>Unique content</h2>
+        <div class="unique-slider">
+          <div class="item">
+            <div class="unique-card ">
+              <div class="unique-card-inner">
+                <div class="unique-card-front">
+                  <img src="images/basic.svg" alt="" >
+                </div>
+                <div class="unique-card-back">
+                  <div class="unique-img">
+                    <img src="images/img726.webp" alt="">
+                  </div>
+                  <div class="unique-content">
+                    <h6>Markuz Fluid Art</h6>
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="unique-info">
+                          <img src="images/group7184.svg" alt="">
+                          <p>0.078WRD</p>
+                        </div>
+                      </div>
+                      <div class="col-6 text-right">
+                        <div class="unique-info">
+                          <img src="images/rare-info.svg" alt="">
+                          <p>Rare</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="name">By Indra Rakelna</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="unique-card">
+              <div class="unique-card-inner">
+                <div class="unique-card-front">
+                  <img src="images/rare.svg" alt="" >
+                </div>
+                <div class="unique-card-back">
+                  <div class="unique-img">
+                    <img src="images/img727.webp" alt="">
+                  </div>
+                  <div class="unique-content">
+                    <h6>Markuz Fluid Art</h6>
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="unique-info">
+                          <img src="images/group7184.svg" alt="">
+                          <p>0.078WRD</p>
+                        </div>
+                      </div>
+                      <div class="col-6 text-right">
+                        <div class="unique-info">
+                          <img src="images/basic-info.svg" alt="">
+                          <p>Basic</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="name">By Indra Rakelna Mainly Super lon</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="unique-card">
+              <div class="unique-card-inner">
+                <div class="unique-card-front">
+                  <img src="images/legendary.svg" alt="" >
+                </div>
+                <div class="unique-card-back">
+                  <div class="unique-img">
+                    <img src="images/img728.webp" alt="">
+                  </div>
+                  <div class="unique-content">
+                    <h6>Markuz Fluid Art</h6>
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="unique-info">
+                          <img src="images/group7184.svg" alt="">
+                          <p>0.078WRD</p>
+                        </div>
+                      </div>
+                      <div class="col-6 text-right">
+                        <div class="unique-info">
+                          <img src="images/legendary-info.svg" alt="">
+                          <p>Legendary</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="name">By Indra Rakelna</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="unique-card">
+              <div class="unique-card-inner">
+                <div class="unique-card-front">
+                  <img src="images/basic.svg" alt="" >
+                </div>
+                <div class="unique-card-back">
+                  <div class="unique-img">
+                    <img src="images/img726.webp" alt="">
+                  </div>
+                  <div class="unique-content">
+                    <h6>Markuz Fluid Art</h6>
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="unique-info">
+                          <img src="images/group7184.svg" alt="">
+                          <p>0.078WRD</p>
+                        </div>
+                      </div>
+                      <div class="col-6 text-right">
+                        <div class="unique-info">
+                          <img src="images/legendary-info.svg" alt="">
+                          <p>Legendary</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="name">By Indra Rakelna</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slogan">
+      <div class="container">
+        <div class="slogan-item">
+          <div class="row align-items-center">
+            <div class="col-xl-7 offset-xl-1">
+              <h3>Our mission is to help people around the world learn and train words of any language even without any previous knowledge or any level of income. </h3>
+            </div>
+            <div class="col-xl-3">
+              <p>Tokenomics added one more deep level to motivate people to learn and develop new languages and skills!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="works">
+      <div class="container">
+       <h2>How it works</h2>
+        <div class="row">
+          <div class="col-xl-3 col-lg-6">
+            <div class="works-item">
+              <div class="img">
+                <img src="images/play.svg" alt="">
+              </div>
+              <h3>Play And Win</h3>
+              <p>Play 5+ pic and word games and win championships!</p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="works-item">
+              <div class="img">
+                <img src="images/learn.svg" alt="">
+              </div>
+              <h3>Learn and get smarter</h3>
+              <p>Learn words in any language. Train your brain and become smarter.</p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="works-item">
+              <div class="img">
+                <img src="images/earn.svg" alt="">
+              </div>
+              <h3>Earn, collect and trade</h3>
+              <p>Earn WORD crypto coins in magic chests and daily championships!  Collect and trade  NFT decks of words by Artists around the world.</p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+<!--
+            <a href="#subscription" rel="modal:open" class="blob-btn">
+              Become an investor
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </a>
+-->
+         <a href="#subscription" rel="modal:open" class="btn-registration"> Become an investor</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="mechanics" data-autoplay="true">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-7">
+            <h2 class="gradient-text xs-block lg-block">Word Game Mechanics</h2>
+            <div class="mechanics-img">
+              <img class="mechanics-img-0 active" src="images/mechanics-img1.svg" alt="">
+              <img class="mechanics-img-1" src="images/Group6924.svg" alt="">
+              <img class="mechanics-img-2" src="images/mechanics-img1.svg" alt="">
+              <img class="mechanics-img-3" src="images/Group6924.svg" alt="">
+              <img class="mechanics-img-4" src="images/Frame7397.svg" alt="">
+            </div>
+          </div>
+          <div class="col-xl-5"> 
+            <div class="mechanics-item" >
+              <h2 class="gradient-text xs-none lg-none">Word Game Mechanics</h2>
+              <div class="lg-flex">
+                <ul class="mechanics-list">
+                  <li data-number="0" class="active" data-img="images/mechanics-img1.svg">Guess a word</li>
+                  <li data-number="1" data-img="images/Group6924.svg">Word by letter</li>
+                  <li data-number="2" data-img="images/mechanics-img1.svg">Word wheel</li>
+                  <li data-number="3" data-img="images/Group6924.svg">Wordcross</li>
+                  <li data-number="4" data-img="images/Frame7397.svg">And many more </li>
+                </ul>
+
+                <div class="beta-block">
+                  <h3>Play beta version now!</h3>
+                  <div class="row align-items-center">
+                    <div class="col-lg-7">
+                      <a href="#" class="btn-game btn-google"><img src="images/Google_Play_Store_badge.svg" alt=""></a>
+                    </div>
+                    <div class="col-lg-5">
+                      <p>AppStore coming soon</p>
+  <!--                    <a href="#" class="btn-game btn-apple"><img src="images/aple.svg" alt=""></a>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="nft">
+      <div class="container">
+        <h2>Earn, collect and trade <span>NFT</span> decks and crypto token WORD</h2>
+        <div class="row">
+          <div class="offset-xl-1 col-xl-4 order-2 order-xl-1">
+            <div class="nft-item ">
+              <div class="svg">
+                <svg viewBox="0 0 105 105" width="105" height="105" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a1" fill="#fff"><rect y="4" width="98" height="98" rx="6"/></mask><rect y="4" width="98" height="98" rx="6" stroke="#EBFF00" stroke-width="14" mask="url(#a1)"/><path d="m49 23 3.92 19.232L68.283 30.02l-9.36 17.252 19.62.52-18.26 7.199L74.982 68l-18.615-6.222 2.895 19.413L49 64.459 38.74 81.191l2.894-19.413L23.02 68l14.696-13.01-18.26-7.2 19.621-.52-9.36-17.251 15.365 12.213L49 23Z" fill="#fff"/></svg>
+              </div>
+              <h3>Magic Boxes</h3>
+              <p>Win Magic Boxes in multiplayer championships and get NFT decks and crypto token WORD.</p>
+            </div>
+            <div class="nft-item">
+              <div class="svg">
+                <svg viewBox="0 0 105 105" width="105" height="105" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a2" fill="#fff"><path d="M104 52.5a.985.985 0 0 1 .99 1A52.5 52.5 0 1 1 78.36 6.81c.48.273.637.887.356 1.362L52.68 52.198a.2.2 0 0 0 .172.302H104Z"/></mask><path d="m52.678 52.198 6.026 3.564-6.026-3.564ZM78.36 6.811l-3.448 6.091 3.448-6.091Zm.356 1.361L72.691 4.61l6.025 3.563ZM104.99 53.5l6.999.133-6.999-.133Zm-6.998-.133a45.5 45.5 0 0 1-9.43 26.879l11.095 8.537a59.497 59.497 0 0 0 12.332-35.15l-13.997-.266Zm-9.43 26.879A45.5 45.5 0 0 1 64.16 96.48l3.588 13.533a59.502 59.502 0 0 0 31.908-21.23l-11.096-8.537ZM64.16 96.48a45.5 45.5 0 0 1-29.238-2.012l-5.409 12.913a59.506 59.506 0 0 0 38.235 2.632L64.161 96.48Zm-29.238-2.012a45.5 45.5 0 0 1-21.946-19.425L.817 81.98a59.499 59.499 0 0 0 28.697 25.402l5.409-12.913ZM12.977 75.043A45.5 45.5 0 0 1 7.43 46.266l-13.868-1.919A59.5 59.5 0 0 0 .816 81.98l12.161-6.936ZM7.43 46.266a45.5 45.5 0 0 1 13.152-26.191l-9.822-9.977a59.5 59.5 0 0 0-17.198 34.25L7.43 46.265Zm13.152-26.191A45.5 45.5 0 0 1 46.975 7.337l-1.7-13.897A59.5 59.5 0 0 0 10.76 10.098l9.822 9.977ZM46.975 7.337a45.5 45.5 0 0 1 27.937 5.565L81.808.72A59.5 59.5 0 0 0 45.275-6.56l1.7 13.897Zm25.716-2.728L46.653 48.635l12.05 7.127 26.038-44.026-12.05-7.127ZM52.851 59.5H104v-14H52.85v14Zm-6.198-10.865c-2.838 4.8.621 10.865 6.198 10.865v-14c5.266 0 8.534 5.729 5.853 10.262l-12.05-7.127Zm28.259-35.733c-3.005-1.7-3.89-5.471-2.22-8.293l12.05 7.127c2.23-3.773 1.031-8.773-2.934-11.017l-6.896 12.183Zm37.077 40.731c.087-4.556-3.606-8.133-7.989-8.133v14c-3.279 0-6.074-2.681-6.008-6.133l13.997.266Z" fill="#EBFF00" mask="url(#a2)"/><circle cx="93.5" cy="29.5" r="11.5" fill="#fff"/></svg>
+              </div>
+              <h3>Buy and win NFT</h3>
+              <p>Buy and win limited edition NFT decks of words by Artists around the world</p>
+            </div>
+            <div class="nft-item">
+              <div class="svg">
+                <svg viewBox="0 0 105 105" width="105" height="105" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m5 85 28-32.5 24.667 21.903L99 24.5" stroke="#EBFF00" stroke-width="7"/><path stroke="#fff" stroke-width="7" d="M5 101.5h96"/></svg>
+              </div>
+              <h3>Earn and trade</h3>
+              <p>NFT decks generate for owner usage reward. Reward depends on deck rarity and price. NFT сan be trade on in-game marketplace or any other NFT platform.</p>
+            </div>
+          </div>
+          <div class="col-xl-6 order-1 order-xl-2">
+            <ul class="nft-cardList"></ul>
+           
+            <ul class="nft-card">
+              <li>
+                <div class="author">
+                  <div class="author-photo"><img src="images/ph1.webp" alt=""></div>
+                  <div class="author-content">
+                    <div class="author-name">By Indra Rakelna</div>
+                    <a href="#" class="author-insta" target="_blank"><img src="images/insta.svg" alt=""> @indrarakeln06</a>
+                  </div>
+                </div>
+                
+                <div class="card-content">
+                  <div class="card-img">
+                    <img src="images/img726.webp" alt="">
+                  </div>
+                  
+                  <div class="content-bottom">
+                    <h5>Markuz Fluid Art</h5>
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="unique-info">
+                          <img src="images/group7184.svg" alt="">
+                          <p>0.078WRD</p>
+                        </div>
+                      </div>
+                      <div class="col-6 text-right">
+                        <div class="unique-info">
+                          <img src="images/basic-info.svg" alt="">
+                          <p>Basic</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="author">
+                  <div class="author-photo"><img src="images/ph2.webp" alt=""></div>
+                  <div class="author-content">
+                    <div class="author-name">By Indra Rakelna</div>
+                    <a href="#" class="author-insta" target="_blank"><img src="images/insta.svg" alt=""> @indrarakeln06</a>
+                  </div>
+                </div>
+                
+                <div class="card-content">
+                  <div class="card-img">
+                    <img src="images/img727.webp" alt="">
+                  </div>
+                  
+                  <div class="content-bottom">
+                  <h5>Markuz Fluid Art</h5>
+
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="unique-info">
+                          <img src="images/group7184.svg" alt="">
+                          <p>0.078WRD</p>
+                        </div>
+                      </div>
+                      <div class="col-6 text-right">
+                        <div class="unique-info">
+                          <img src="images/rare-info.svg" alt="">
+                          <p>Rare</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="author">
+                  <div class="author-photo"><img src="images/ph3.webp" alt=""></div>
+                  <div class="author-content">
+                    <div class="author-name">By Indra Rakelna</div>
+                    <a href="#" class="author-insta" target="_blank"><img src="images/insta.svg" alt=""> @indrarakeln06</a>
+                  </div>
+                </div>
+                
+                
+                <div class="card-content">
+                  <div class="card-img">
+                    <img src="images/img728.webp" alt="">
+                  </div>
+                  
+                  <div class="content-bottom">
+                    <h5>Markuz Fluid Art</h5>
+
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="unique-info">
+                          <img src="images/group7184.svg" alt="">
+                          <p>0.078WRD</p>
+                        </div>
+                      </div>
+                      <div class="col-6 text-right">
+                        <div class="unique-info">
+                          <img src="images/legendary-info.svg" alt="">
+                          <p>Legendary</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            
+     <!--       <a href="#subscription" rel="modal:open" class="blob-btn nft-btn">
+               Become an artist
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </a>
+            -->
+            <a href="#subscription" rel="modal:open" class="btn-registration  nft-btn"> Become an artist</a>
+            
+          </div>
+        </div>
+        <ul class="nft-logo">
+          <li><img src="images/nft-logo1.svg" alt=""> <p>Coming soon</p></li>
+          <li><img src="images/nft-logo2.svg" alt=""> <p>Coming soon</p></li>
+          <li><img src="images/nft-logo3.svg" alt=""> <p>Coming soon</p></li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="tokenomics">
+      <div class="container">
+        <h2>Tokenomics and listings</h2>
+        <div class="tokenomics-bg">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="display-1">Polygon</div>
+              <p>Blockchain Network</p>
+            </div>
+            <div class="col-xl-6">
+              <div class="display-1">WORD</div>
+              <p>Ticker</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tba">
+          <div class="tba-row">
+            <div class="tba-item">
+              <div class="title">TBA</div>
+              <p>Initial Project Valuation</p>
+            </div>
+            <div class="tba-item">
+              <div class="title">TBA</div>
+              <p>Initial Token Circulation</p>
+            </div>
+            <div class="tba-item">
+              <div class="title">TBA</div>
+              <p>Initial Market Cap</p>
+            </div>
+            <div class="tba-item">
+              <div class="title">1&nbsp;000&nbsp;000&nbsp;000</div>
+              <p>Token Supply</p>
+            </div>
+          </div>
+          
+            <a href="#subscription" rel="modal:open" class="btn-registration  xs-none"> Become an investor</a>
+          
+          
+<!--
+          <a href="#subscription" rel="modal:open" class="blob-btn  xs-none">
+             Become an investor
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+-->
+        </div>
+        
+        <div class="tokens row">
+          <div class="col-xl-5 col-lg-7">
+            <h3>How tokens are used in game</h3>
+            <ul class="tokens-list">
+              <li>In-game Currency (buying Magic Chests and NFT Words Decks)</li>
+              <li>NFT Word Decks usage Reward</li>
+              <li>NFT marketplace</li>
+              <li>Championship daily ticket</li>
+              <li>Speed up time-gated content</li>
+            </ul>
+          </div>
+          <div class="col-xl-7 col-lg-5">
+            <ul class="tokenomics-logo">
+              <li>
+                <img src="images/tokens-img1.svg" alt="">
+                <p>Coming soon</p>
+              </li>
+              <li>
+                <img src="images/tokens-img2.svg" alt="">
+                <p>Coming soon</p>
+              </li>
+            </ul>
+            <p class="tokens-p">Players will be rewarded with WORD token for game wins and Magic Chests. Token can be spend on NFT Decks and Magic Chests. NFT Decks generate for owner usage reward in token WORD.</p>
+          </div>
+        </div>
+        <a href="#subscription" rel="modal:open" class="btn-registration  xs-block"> Become an investor</a>
+       <!-- <a href="#subscription" rel="modal:open" class="blob-btn nft-btn xs-block">
+             Become an investor
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>-->
+      </div>
+    </section>
+    
+    <section class="roadmap" id="roadmap">
+      <div class="container">
+        <h2>Roadmap</h2>
+        <h5>Completed</h5>
+        <ul class="roadmap-list" id="completed"></ul>
+        <a href="#completed" class="show-more">Show full list </a>
+        
+        <h5 class="mt-56">Upcoming</h5>
+        <div class="upcoming-item" id="upcoming">
+          <div class="title"></div>
+          <div class="info"></div>
+          <a href="#subscription" rel="modal:open" class="upcoming-link">Notify me</a>
+        </div>
+        
+        <h5>Planned</h5>
+        <ul class="roadmap-list" id="planned"></ul>
+        <a href="#planned" class="show-more">Show full list </a>
+      </div>
+    </section>
+    
+    <section class="team" id="team">
+      <div class="container">
+        <h2>Our team</h2>
+        <div class="row team-desktop">
+          <div class="col-12">
+           <div class="row align-items-center"> 
+             <div class="offset-xl-3 col-lg-6 col-xl-4 order-2 order-lg-1">
+              <div class="team-item large">
+                <div class="name">Michail Temnikov</div>
+                <div class="post">CEO</div>
+                <p>Players will be rewarded with WORD token for game wins and Magic Chests. Token can be spend on NFT Decks and Magic Chests. NFT Decks generate for owner usage reward in token WORD.</p>
+              </div>
+            </div>
+            <div class="col-xl-5 col-lg-6 order-1 order-lg-2">
+              <div class="team-item large">
+                <div class="img">
+                  <img src="images/team-img1.webp" srcset="images/team-img1@2x.webp 2x"  alt="">
+                </div>
+              </div>
+            </div></div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="team-item">
+              <div class="img">
+                <img src="images/team-img2.webp" srcset="images/team-img2@2x.webp 2x" alt="">
+              </div>
+              <div class="name">Victor Novojilov</div>
+              <div class="post">Crypto Expert</div>
+              <p>Investor, trader, entrepreneur 5 years of trading and arbitrage systems for crypto exchanges</p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="team-item">
+              <div class="img">
+                <img src="images/team-img3.webp" srcset="images/team-img3@2x.webp 2x" alt="">
+              </div>
+              <div class="name">Nikita Zanegin</div>
+              <div class="post">Unity/Blockchain developer</div>
+              <p>Investor, trader, entrepreneur 5 years of trading and arbitrage systems for crypto exchanges</p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="team-item">
+              <div class="img">
+                <img src="images/team-img4.webp" srcset="images/team-img4@2x.webp 2x" alt="">
+              </div>
+              <div class="name">Gleb Khaletsky</div>
+              <div class="post">Unity developer</div>
+              <p>Investor, trader, entrepreneur 5 years of trading and arbitrage systems for crypto exchanges</p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="team-item">
+              <div class="img">
+                <img src="images/team-img5.webp" srcset="images/team-img5@2x.webp 2x" alt="">
+              </div>
+              <div class="name">Victor Novojilov</div>
+              <div class="post">Crypto Expert</div>
+              <p>Investor, trader, entrepreneur 5 years of trading and arbitrage systems for crypto exchanges</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-slider"></div>
+      </div>
+    </section>
+    
+    <section class="projects">
+      <div class="container">
+        <h2>Our successful projects</h2>
+        <div class="row projects-desktop">
+          <div class="col-xl-4 col-lg-6">
+            <div class="projects-item">
+              <h4>Crazy Spaceship</h4>
+              <div class="projects-info">
+                <div class="img">
+                  <img src="images/game1.webp" alt="">
+                </div>
+                <div class="number">1 000 000+ <span>Dowloads</span></div>
+              </div>
+              <div class="projects-content">
+                <div class="img">
+                  <img src="images/projectsimg1.webp" srcset="images/projectsimg1@2x.webp 2x" alt="" class="back">
+                  <img src="images/projectsimg6.webp" srcset="images/projectsimg6@2x.webp 2x" alt="" class="front">
+                </div>
+                <p>Attention! The invasion begins! Aliens are attacking planet Earth! иEver wanted to try and take over our planet? Feel yourself in the shoes of an alien, an invader from another world?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <div class="projects-item">
+              <h4>Train Race</h4>
+              <div class="projects-info">
+                <div class="img">
+                  <img src="images/game2.webp" alt="">
+                </div>
+                <div class="number">10 000+ <span>Dowloads</span></div>
+              </div>
+              <div class="projects-content">
+                <div class="img">
+                  <img src="images/projectsimg2.webp" srcset="images/projectsimg2@2x.webp 2x" alt="" class="back">
+                  <img src="images/projectsimg3.webp" srcset="images/projectsimg3@2x.webp 2x" alt="" class="front">
+                </div>
+                <p>Drive the train. Participate in races with other players. Gather a collection of unique trains.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <div class="projects-item">
+              <h4>FragArena</h4>
+              <div class="projects-info">
+                <div class="img">
+                  <img src="images/game3.webp" alt="">
+                </div>
+                <div class="number">Beta version <span>OCT 2021</span></div>
+              </div>
+              <div class="projects-content">
+                <div class="img">
+                  <img src="images/projectsimg4.webp" srcset="images/projectsimg4@2x.webp 2x" alt="" class="back">
+                  <img src="images/projectsimg5.webp" srcset="images/projectsimg5@2x.webp 2x" alt="" class="front">
+                </div>
+                <p>Lorem ipsum an invader from another world? Kidnap people for experiments or destroy the city to show your superiority?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="projects-slider"></div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <a class="logo" href="/"><img src="images/logo.svg" alt=""></a>
+          <ul class="social">
+            <li><a href="#tw" target="_blank"><svg viewBox="0 0 44 44" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M37.197 14.476c.023.329.023.657.023.985C37.22 25.469 29.59 37 15.645 37A21.455 21.455 0 0 1 4 33.602c.61.07 1.197.093 1.831.093 3.545 0 6.809-1.195 9.415-3.234a7.595 7.595 0 0 1-7.09-5.25c.469.07.939.117 1.432.117.68 0 1.361-.094 1.995-.258a7.575 7.575 0 0 1-6.08-7.43v-.093a7.647 7.647 0 0 0 3.427.96 7.562 7.562 0 0 1-3.38-6.304c0-1.406.375-2.695 1.032-3.82a21.567 21.567 0 0 0 15.636 7.922 8.537 8.537 0 0 1-.188-1.735c0-4.172 3.381-7.57 7.584-7.57 2.183 0 4.155.914 5.54 2.39a14.944 14.944 0 0 0 4.813-1.828 7.552 7.552 0 0 1-3.334 4.172c1.526-.164 3.005-.586 4.367-1.171a16.284 16.284 0 0 1-3.803 3.913Z" fill="#fff"></path></svg></a></li>
+            <li><a href="#tlg" target="_blank"><svg viewBox="0 0 38 44" width="38" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m37.888 8.327-5.734 26.925c-.432 1.9-1.56 2.373-3.163 1.478l-8.737-6.41-4.216 4.036c-.466.465-.856.853-1.755.853l.627-8.859 16.193-14.569c.704-.625-.153-.97-1.095-.346L9.991 23.985 1.373 21.3c-1.875-.583-1.909-1.867.39-2.762L35.47 5.608c1.56-.583 2.926.346 2.417 2.72Z" fill="#fff"></path></svg></a></li>
+            <li><a href="#" target="_blank"><svg viewBox="0 0 55 44" width="55" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M43.305 8.787a.112.112 0 0 0-.057-.051 36.72 36.72 0 0 0-8.956-2.734.138.138 0 0 0-.144.067c-.41.733-.782 1.485-1.115 2.254a34.039 34.039 0 0 0-10.06 0 22.646 22.646 0 0 0-1.132-2.254.14.14 0 0 0-.144-.067 36.615 36.615 0 0 0-8.956 2.734.128.128 0 0 0-.059.05c-5.704 8.385-7.267 16.564-6.5 24.642a.146.146 0 0 0 .057.101 36.716 36.716 0 0 0 10.987 5.465.144.144 0 0 0 .154-.05 25.59 25.59 0 0 0 2.248-3.597.137.137 0 0 0-.076-.191 24.196 24.196 0 0 1-3.433-1.61.14.14 0 0 1-.069-.111.137.137 0 0 1 .056-.12c.23-.17.461-.346.681-.525a.137.137 0 0 1 .143-.019c7.2 3.235 14.996 3.235 22.112 0a.137.137 0 0 1 .144.017c.22.18.45.358.683.528a.14.14 0 0 1 .056.118.137.137 0 0 1-.068.112 22.715 22.715 0 0 1-3.434 1.608.141.141 0 0 0-.081.08.136.136 0 0 0 .006.113 28.728 28.728 0 0 0 2.246 3.595.141.141 0 0 0 .154.052 36.597 36.597 0 0 0 11.005-5.465.141.141 0 0 0 .057-.1c.918-9.338-1.536-17.45-6.505-24.642ZM20.703 28.51c-2.168 0-3.954-1.958-3.954-4.363 0-2.405 1.752-4.364 3.954-4.364 2.22 0 3.99 1.976 3.955 4.364 0 2.405-1.752 4.363-3.955 4.363Zm14.62 0c-2.167 0-3.954-1.958-3.954-4.363 0-2.405 1.752-4.364 3.955-4.364 2.22 0 3.989 1.976 3.954 4.364 0 2.405-1.734 4.363-3.954 4.363Z" fill="#fff"></path></svg></a></li>
+            <li><a href="#" target="_blank"><svg viewBox="0 0 39 44" width="39" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#c)"><path d="M19.257 12.117a9.859 9.859 0 0 0-9.874 9.874 9.859 9.859 0 0 0 9.874 9.875 9.859 9.859 0 0 0 9.874-9.875 9.859 9.859 0 0 0-9.874-9.874Zm0 16.294c-3.532 0-6.42-2.88-6.42-6.42s2.88-6.42 6.42-6.42 6.42 2.88 6.42 6.42-2.888 6.42-6.42 6.42Zm12.581-16.698a2.298 2.298 0 0 1-2.303 2.303 2.303 2.303 0 1 1 2.303-2.303Zm6.54 2.338c-.146-3.085-.85-5.818-3.11-8.07-2.252-2.251-4.985-2.956-8.07-3.11-3.18-.181-12.71-.181-15.89 0-3.077.145-5.81.85-8.07 3.102-2.26 2.251-2.956 4.984-3.11 8.07-.18 3.179-.18 12.71 0 15.889.146 3.085.85 5.818 3.11 8.07 2.26 2.251 4.985 2.956 8.07 3.11 3.18.18 12.71.18 15.89 0 3.085-.146 5.818-.85 8.07-3.11 2.25-2.252 2.956-4.985 3.11-8.07.18-3.18.18-12.702 0-15.881ZM34.27 33.344a6.5 6.5 0 0 1-3.66 3.66c-2.536 1.006-8.551.774-11.353.774-2.801 0-8.826.224-11.352-.773a6.5 6.5 0 0 1-3.661-3.661c-1.006-2.536-.773-8.551-.773-11.353 0-2.801-.224-8.825.773-11.352a6.5 6.5 0 0 1 3.66-3.661c2.536-1.005 8.552-.773 11.353-.773 2.802 0 8.826-.224 11.353.773a6.5 6.5 0 0 1 3.66 3.661c1.006 2.535.774 8.55.774 11.352 0 2.802.232 8.826-.773 11.353Z" fill="#fff"></path></g><defs><clipPath id="c"><path fill="#fff" d="M0 0h38.5v44H0z"></path></clipPath></defs></svg></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <ul class="menu">
+            <li><a class="scroll" href="#game">Game</a></li>
+            <li><a class="scroll" href="#roadmap">Roadmap</a></li>
+            <li><a class="scroll" href="#team">Team</a></li>
+          </ul>
+          
+          <a href="https://www.orangelabel.com/" class="orange-logo" target="_blank" ><svg width="135" height="80" viewBox="0 0 135 80"  fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#k)" fill="#fff"><path d="M119.946 5.534c.631-.163.036.712.914.644 2.406-.186 6.667-.91 7.124-1.553.623-.874-.599-4.482-2.141-4.62l-.07-.005-.068.014c-31.262 6.97-57.733 21.64-79.058 43.992 1.39-2.997 2.884-5.569 4.287-6.91l.125-.004.09-.219c.106-.145.211-.422.038-.816-.005-.01-.014-.022-.019-.033-.015-.04-.022-.077-.043-.118-.34-.698-1.151-1.203-1.91-1.535-.374-.188-.74-.323-1.04-.368a4.34 4.34 0 0 0-.182-.047c-.01-.003-.017.011-.021.03-.03 0-.064-.002-.091 0-.292.027-.534.186-.62.452-.021.064-.046.131-.068.195-.767.5-2.289 1.65-6.077 4.093l-.366.235c3.45-9.233 6.266-17.88 6.178-19.138-.289-4.087-4.325-7.837-6.507-7.704a1.586 1.586 0 0 0-.227.03c-2.123.445-4.016 1.828-5.705 3.124-2.814 2.158-5.355 4.667-7.785 7.244a113.817 113.817 0 0 0-4.934 5.62 146.471 146.471 0 0 0-2.708 3.37C9.851 43.368 4.402 53.311 3.586 56.796c-.053.376.03.709.237.96.32.393 5.578-1.195 5.74-2.338.045-.342 2.037-8.19 4.825-12.729.004-.004.005-.008.008-.012-1.653 4.593-3.139 9.538-4.157 14.281a200.407 200.407 0 0 1-9.77 4.797l-.043.018-.035.024c-.648.451-.32 1.525-.211 1.88.321 1.058.98 3.059 2.032 2.958.27-.024.814-.35 7.103-4.524-.847 6.041-.66 11.356 1.287 14.61 1.402 2.345 3.624 3.443 6.6 3.259.321-.02.653-.056.988-.105 1.484-.221 3.175-1.61 5.164-4.25 5.688-7.551 12.275-23.416 15.663-32.119l.27-.695c2.207-1.32 4.234-2.485 5.97-3.412-3.052 6.696-7.718 14.66-8.591 16.094l-.098.127.003.052c-.172.398-.21 1.042.357 2.015.715 1.232 2.529 3.028 3.63 2.925a.857.857 0 0 0 .66-.383l.055-.017.078-.238c7.619-23.41 45.385-45.822 78.595-54.44Zm-98.454 31.47c.572-1.204.656-1.389.682-1.54.052-.305-.047-.627-.29-.938-.285-.366-.806-.74-1.43-.919.246-.32.49-.635.735-.945a79.785 79.785 0 0 1 2.397-2.908c7.248-8.374 13.733-12.249 15.791-12.375.291-.017.408.043.444.07.909.674 1.965 3.31-1.2 13.431-1.14 3.64-2.733 7.892-4.6 12.343-5.784 3.6-12.651 7.715-19.689 11.549 1.477-4.773 3.78-10.618 7.16-17.768Zm5.068 22.1c-5.555 10.616-9.388 15.479-10.708 15.562a.281.281 0 0 1-.157-.026c-2.79-1.462-4.823-5.41-2.676-14.986 5.523-3.664 12.694-8.396 19.337-12.577a210.578 210.578 0 0 1-5.796 12.027Z"/><path d="M84.963 51.29a1.28 1.28 0 0 0 .516-.184c.335-.21 7.544-14.193 14.197-20.383l.152-.092.057-.232c.002-.005 0-.011.002-.016l.006-.009c.404-2.044-2.245-2.865-2.348-2.899l-.527.202c-.042.063-.185.246-.402.527-2.017 1.068-6.926 5.035-11.689 9.178 1.759-2.495 3.186-4.341 3.593-4.671.247-2.612-3.198-3.339-3.32-3.366l-.244.135a1.127 1.127 0 0 0-.514.202c-.65.463-8.185 6.22-13.712 11.184-2.143 1.924-5.155 4.546-7.658 6.77.288-.568.63-1.174 1.042-1.823 3.808-5.992 10.31-11.939 10.18-12.664-.127-.722-2.364-1.069-2.364-1.069l-.103.013c-.197.022-.466.06-2.47 2.401-.008-.001-.012-.003-.02-.006 0 0-2.274-.43-2.98-.411-.707.017-5.175 3.82-10.298 8.428-10.689 9.611-10.081 12.647-9.772 13.308.447.961 1.227 1.405 2.248 1.282l.001-.002c2.72-.327 7.513-5.329 11.677-10.01-1.024 1.793-1.751 3.425-1.859 4.574l-.001.024v.02c0 .254.08.508.214.755.381.908 1.782 2.707 3.542 2.495.121-.017.244-.042.363-.077l.153-.048.095-.132c2.313-3.225 9.223-10.294 15.761-15.653-3.3 4.764-6.807 9.696-7.496 10.683l-.054.073-.028.084c-.097.298-.123.785.304 1.411.716 1.04 2.446 2.092 3.789 1.931.284-.034.544-.12.776-.257l.186-.11.068-.22c.565-1.832 2.041-4.594 3.794-7.483 2.743-2.563 6.278-5.274 9.616-7.651-3.533 4.706-7.074 9.702-7.586 11.518l-.06.216.094.18c.55 1.012 2.115 1.987 3.08 1.873ZM113.551 27.703l.154-.12.026-.191a1.45 1.45 0 0 0-.383-1.193c-1.094-1.2-4.272-1.165-4.63-1.155h-.064l-.059.019c-1.284.373-17.18 18.584-18.62 22.574-.068.187-.276.76.01 1.163.647.914 2.953 1.061 4.052.853.496-.095.918-.282 1.198-.407.075-.035.171-.076.183-.08.186-.038.206-1.335 7.667-9.667-4.67 8.587-16.879 31.307-17.157 31.872-.43.87-3.087 3.311-3.276 4.467l-.046.283.217.173c.376.295 2.306 1.757 3.525 1.522a1.23 1.23 0 0 0 .228-.067c.437-.17 1.063-1.265 7.263-13.383 7.119-13.913 16.611-34.26 19.712-36.663ZM132.915 27.49c-3.398 2.572-21.194 16.625-21.842 16.25-.383-.23 1.223-3.645 1.653-4.095 3.057.348 14.989-14.495 15.019-15.104.035-.607-4.517-1.546-5.752-1.104-2.448.877-16.809 15.607-14.417 21.92.912 1.266 4.426 1.047 4.911.834 1.462-.641 15.114-10.967 21.249-15.948.409-.333 1.242-3.131-.821-2.753Z"/></g><defs><clipPath id="k"><path fill="#fff" d="M0 0h134.253v80H0z"/></clipPath></defs></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<div id="subscription" class="modal">
+  <h3>Please enter your email to stay in touch</h3>
+  <form class="subscription-form" action="#" method="post" novalidate>
+    <input type="email" name="entry.424175415" required>
+    
+    <button type="submit" class="btn-registration  submit"> Confirm</button>
+    
+    
+<!--
+    <button type="submit" class="blob-btn submit">
+      Confirm
+      <span class="blob-btn__inner">
+        <span class="blob-btn__blobs">
+          <span class="blob-btn__blob"></span>
+          <span class="blob-btn__blob"></span>
+          <span class="blob-btn__blob"></span>
+          <span class="blob-btn__blob"></span>
+        </span>
+      </span>
+    </button>
+-->
+  </form>
+</div>
+
+<div id="menu" class="mob-menu hide-menu">
+ <div class="row align-items-center">
+   <div class="col-6">
+     <div class="title">Menu</div>
+   </div>
+   <div class="col-6"><svg class="close-menu" width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="60" rx="30" fill="#F6FF12"/><path d="M21.084 19.13 42.19 40.237M20.24 40.236l21.106-21.105" stroke="#000" stroke-width="4" stroke-linecap="round"/></svg></div>
+ </div>
+  <ul>
+    <li><a class="scroll" href="#game">Game</a></li>
+    <li><a class="scroll" href="#roadmap">Roadmap</a></li>
+    <li><a class="scroll" href="#team">Team</a></li>    
+  </ul>
+   <a href="#subscription" rel="modal:open" class="btn-registration">Launch pads</a>
+<!--  
+  <a href="#subscription" rel="modal:open" class="blob-btn">
+    Launch pads
+    <span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+    </span>
+  </a>-->
+</div>
+ 
+
+<!--  <script defer src="js/app.min.js"></script> -->
+<!--  <script defer src="js/canvas.js"></script>-->
+
+
+  <script defer>    function AppendToBodySrc(elemntType, content) {
+      // detect whether provided content is "link" (instead of inline codes)
+      if (elemntType == 'script') {
+        var x = document.createElement('script');
+        x.src = content;
+        x.type = 'text/javascript';
+      } else if (elemntType == 'style') {
+        var x = document.createElement('link');
+        x.href = content;
+        x.type = 'text/css';
+        x.rel = 'stylesheet';
+      }
+      //append in body
+      (document.body || document.getElementsByTagName('body')[0]).appendChild(x);
+    }
+
+
+
+    var hoverFlag = 0;
+    let parent = document.querySelector('body');
+
+    // moves over the unordered list
+    parent.addEventListener("mouseenter", function(event) {
+
+      if (hoverFlag == 0) {
+        handler();
+        hoverFlag = 1;
+      }
+    }, {
+      passive: true
+    });
+
+    parent.addEventListener("touchstart", function(event) {
+
+      if (hoverFlag == 0) {
+        handler();
+        hoverFlag = 1;
+      }
+    }, {
+      passive: true
+    });
+
+
+
+    window.onscroll = function() {
+      if (hoverFlag == 0) {
+        handler();
+        hoverFlag = 1;
+      }
+    }
+
+    function handler(event) {
+      hoverFlag = 1;
+      console.log('handler');
+
+      if (navigator.userAgent.indexOf('Safari') !=-1 && navigator.userAgent.indexOf('Chrome') == -1) {
+        console.log('canvas false')
+      } else {
+        AppendToBodySrc('script', 'js/canvas.js')
+      }
+
+
+//     AppendToBodySrc('script', 'js/canvas.js')
+      AppendToBodySrc('script', 'js/app.min.js')
+
+      scrollFlag = 1;
+
+      return false;
+    }
+  </script>
+  
+
+</body>
+
+</html>

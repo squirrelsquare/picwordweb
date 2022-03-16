@@ -24,7 +24,7 @@
 }());
 */
 
-const canvas = document.getElementById("canvas"),
+var canvas = document.getElementById("canvas"),
   context = canvas.getContext("2d"),
   colorPallete = ["#9222f9", "#ffdd02", "#36ff40"];
 
@@ -69,7 +69,7 @@ function loop() {
   if (count === randomCount) {
     balls.push(new Ball());
     count = 0;
-    randomCount = 3 + Math.floor(Math.random() * 5);
+    randomCount = 5 + Math.floor(Math.random() * 10);
   }
   count++;
   for (var i = 0; i < balls.length; i++) {
@@ -102,13 +102,14 @@ function removeBall() {
   for (var i = 0; i < balls.length; i++) {
     var b = balls[i];
     if (
-      b.x + b.r < 0 ||
-      b.x - b.r > width ||
-      b.y + b.r < 0 ||
-      b.y - b.r > height ||
-      b.r <= 0
+        i>10
+      //b.x + b.r < 0 ||
+      //b.x - b.r > width ||
+      //b.y + b.r < 0 ||
+      //b.y - b.r > height ||
+      //b.r <= 0
     ) {
-      balls.splice(i, 1);
+      balls.splice(0, 1);//i
     }
   }
 }

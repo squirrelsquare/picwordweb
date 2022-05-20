@@ -11,7 +11,7 @@
   },
   {
     "title" : "User Aquisition Tests",
-    "info" : "CPI 70 cents om Android USA",
+    "info" : "CPI 70 cents on Android USA",
     "complete" : 1
   },
   {
@@ -46,59 +46,70 @@
   },
   {
     "title" : "Word decks",
-    "info" : "",
+    "info" : "March 2022",
     "complete" : 1
   },
+  
+  
   {
-    "title" : "Private sale on Launchpad",
+    "title" : "Championships Beta",
     "info" : "April 2022",
-    "complete" : 0
+    "complete" : 1
   },
+  
   {
-    "title" : "Redesign game",
-    "info" : "April 2022",
-    "complete" : 0
-  },
-  {
-    "title" : "Championships",
-    "info" : "May 2022",
-    "complete" : 0
-  },
-  {
-    "title" : "Soft launch in Canada",
-    "info" : "May 2022",
-    "complete" : 0
-  },
-  {
-    "title" : "5 languages",
-    "info" : "May 2022",
-    "complete" : 0
+    "title" : "ASO Optimization",
+    "info" : "Conversion to install +30%",
+    "complete" : 1
   },
   {
     "title" : "User Aquisition Tests",
     "info" : "May 2022",
-    "complete" : 0
+    "complete" : 1
   },
-  {
-    "title" : "Token listing on Gate.io",
+    {
+    "title" : "Worldwide launch",
+    "info" : "May 2022",
+    "complete" : 1
+  },
+    {
+    "title" : "Add crypto token WORD to game",
     "info" : "June 2022",
     "complete" : 0
   },
+    
+    {
+    "title" : "NFT presale",
+    "info" : "June 2022",
+    "complete" : 0
+  },
+    {
+    "title" : "Token listing on Swap",
+    "info" : "July 2022",
+    "complete" : 0
+  },
+    {
+    "title" : "5 languages",
+    "info" : "June 2022",
+    "complete" : 0
+  },
+    {
+    "title" : "Private sale on Launchpad",
+    "info" : "July 2022",
+    "complete" : 0
+  },  
+  
   {
-    "title" : "Add crypto token WORD to game",
+    "title" : "Redesign game",
     "info" : "July 2022",
     "complete" : 0
   },
   {
-    "title" : "NFT presale on Binance NFT",
+    "title" : "Token listing on DEX",
     "info" : "July 2022",
     "complete" : 0
   },
-  {
-    "title" : "Token listing on Binance ",
-    "info" : "August 2022",
-    "complete" : 0
-  },
+      
   {
     "title" : "NFT word decks",
     "info" : "September 2022",
